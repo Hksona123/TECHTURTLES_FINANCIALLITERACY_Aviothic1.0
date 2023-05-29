@@ -1,0 +1,48 @@
+Project Documentation:
+
+M-MANAGEMENT - Financial management among teenagers
+
+1. Project Overview:-
+
+The M-Management is a web Page is a user-friendly and interactive platform designed to help individuals or organizations effectively manage their finances. This documentation provides an overview of the web page's features, functionalities, and usage instructions.It highlight the importance of financial literaccy in making informed financial decisions.
+
+2.Project Deliverables:-
+
+A user friendly webpage providing all the relevant information and resouces to learn about financial management,strategies to implement it,key components of finance management and also provide a user command button to make his particular database in which he/she can input his liabilities and assets.
+
+3.Project Team and Roles:-
+
+Harsh Kumar Sona(Web development)
+Abhishek Kumar(CSS style)
+Ratnesh Kumar Kashyap(Theme and content)
+Aryan Maury(Theme and content)
+
+4.Project approach and methodologies:-
+
+The project followed a web development approach,using HTML,CSS and little bit Javascript.
+Adding relevant content for learning more about financial management and new web pages through which we can make our new database and adding asked information to show monthly graph and adding AI to it to make a graph and list of expensing to maximize saving and minimise expenses.
+
+5.Project Tasks and Activities:-
+
+Designing the web pages structures and buttons to go to another linked webpages.
+Creating and styling HTML elements using CSS(tailwind css).
+Adding relevant content,including text,images and links.
+Testing the functionality of the webpages across different devices.
+
+6.Project Resources:-
+
+Software used:-Visual studio code,Google chrome,Notepad,Powerpoint.
+Reference material:-Wikipedia,Chatgpt,Google,Tailwind.
+CSS style:-Tailwind CSS.
+
+7.Project Risks and Mitigation:-
+
+Risk:-Limited information about financial management.
+Mitigation:-Ensuring regular updates of content and adding AI in the website to give final output.
+
+8.Project Communication Plan:-
+
+Regular team meetings to update AI and adding more javascript .
+
+
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Income and Expense Tracker</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <html>
+        <style>
+            body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto 20px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#graphContainer {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+        </style>
+    </html>
+
+  <h1>Income and Expense Tracker</h1>
+  
+  <div id="chart"></div>
+  
+  
+  
+  <form id="inputForm">
+    <label for="income">Income:</label>
+    <input type="number" id="income" name="income" required><br><br>
+    
+    <label for="expenses">Expenses:</label>
+    <input type="number" id="expenses" name="expenses" required><br><br>
+    
+    <label for="savings">Savings:</label>
+    <input type="number" id="savings" name="savings" required><br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+  
+  <script>
+    document.getElementById("inputForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var income = parseFloat(document.getElementById("income").value);
+      var expenses = parseFloat(document.getElementById("expenses").value);
+      var savings = parseFloat(document.getElementById("savings").value);
+      
+      updateGraph(income, expenses, savings);
+    });
+    
+    function updateGraph(income, expenses, savings) {
+      var data = [
+        {
+          x: ['Income', 'Expenses', 'Savings'],
+          y: [income, expenses, savings],
+          type: 'bar'
+        }
+      ];
+      
+      var layout = {
+        title: 'Income and Expenses',
+        xaxis: {title: 'Category'},
+        yaxis: {title: 'Amount'}
+      };
+      
+      if (expenses > income) {
+        var shapes = [
+          {
+            type: 'line',
+            x0: -0.5,
+            y0: income,
+            x1: 2.5,
+            y1: income,
+            line: {
+              color: 'red',
+              width: 2,
+              dash: 'dash'
+            }
+          }
+        ];
+        
+        layout.shapes = shapes;
+      }
+      
+      Plotly.newPlot('chart', data, layout);
+    }
+  </script>
+  <h3>AFTER ADDING INPUT AND SUBMITTING THE INPUT.LATER ON,WE HAVE TO ADD AI IN THIS PAGE WHICH WILL COMPARE THE BUDGET AND OTHER INPUTS TO MAKE A IDEAL GRAPH SHOWING BEST WAY TO MAXIMIZE SAVING AND MINIMISE EXPENSES. IT WILL ALSO SUGGEST WAYS TO MAXIMIZE SAVING AND MINIMISE EXPENDITURE.</h3>
+</body>
+</html>
